@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Oi&family=Uncial+Antiqua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oi&family=Sora:wght@100..800&family=Uncial+Antiqua&display=swap");
+@import "tailwindcss";
+
+.initial-logo {
+  color: #8ecae6;
+  font-family: "Uncial Antiqua", system-ui;
+  font-style: normal;
+}
+.emelgabb-text {
+  font-family: "Sora", system-ui;
+  font-style: normal;
+}
