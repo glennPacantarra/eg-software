@@ -285,7 +285,7 @@ export default function Cashier() {
 
               <button
                 onClick={handlePrint}
-                className="flex h-[44px] items-center justify-center gap-2 rounded-[18px] border border-red-300 text-sm text-gray-500 transition hover:bg-red-50"
+                className="flex h-11 items-center justify-center gap-2 rounded-[18px] border border-red-300 text-sm text-gray-500 transition hover:bg-red-50"
               >
                 <Printer size={15} />
                 Print
