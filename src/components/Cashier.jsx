@@ -1,4 +1,4 @@
-import "../styles/login.css";
+import "../styles/Login.css";
 
 import { useMemo, useState } from "react";
 import { Search, Trash2, Delete, Printer } from "lucide-react";
