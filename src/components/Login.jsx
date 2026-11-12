@@ -1,4 +1,4 @@
-import "../styles/login.css";
+import "./styles/Login.css";
 import { useState } from "react";
 // import { Eye, EyeOff } from "lucide-react";
 import Footer from "./Footer";
