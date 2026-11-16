@@ -102,10 +102,10 @@ export default function Cashier() {
               <div className="flex-row-reverse flex items-center gap-2 border-b-indigo-800 border-4">
                 <img
                   className=" -scale-x-100"
-                  src="./resources/knight.png"
+                  src="../../public/image/knight.png"
                   alt="Logo"
-                  width={40}
-                  height={40}
+                  width={50}
+                  height={50}
                 />
                 <div className="initial-logo flex h-14 w-14 items-center justify-center font-serif text-3xl italic">
                   EG

@@ -37,7 +37,7 @@ function Login() {
           <div
             className="pointer-events-none absolute -right-28 top-1/2 h-[85%] transform -scale-x-100 w-[75%] -translate-y-1/2 bg-contain bg-right bg-no-repeat opacity-50"
             style={{
-              backgroundImage: "url('../../resources/knight.png')",
+              backgroundImage: "url('../../public/image/knight.png')",
             }}
           />
 
