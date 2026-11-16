@@ -1,4 +1,4 @@
-import "../styles/Login.css";
+import "../styles/Cashier.css";
 
 import { useMemo, useState } from "react";
 import { Search, Trash2, Delete, Printer } from "lucide-react";
@@ -7,7 +7,7 @@ import { Search, Trash2, Delete, Printer } from "lucide-react";
 
 export default function Cashier() {
   const [cart, setCart] = useState([
-    { id: 101, name: "Bakol", qty: 6, price: 10 },
+    { id: 101, name: "Baktol", qty: 6, price: 10 },
     { id: 102, name: "Tapa", qty: 10, price: 9 },
     { id: 103, name: "Tanso", qty: 0.1, price: 700 },
   ]);
@@ -91,21 +91,30 @@ export default function Cashier() {
     });
 
   return (
-    <main className="min-h-screen bg-white text-[#242424] p-4 md:p-6  border-3 border-gray-200">
+    <main className="min-h-screen bg-white text-[#242424] p-4 md:p-6  border-3 border-e-amber-200">
       {/* MAIN LAYOUT */}
-      <div className="mx-auto grid max-w-362.5 grid-cols-1 border-3 border-gray-200 gap-8 lg:grid-cols-[1.15fr_1fr]">
+      <div className="mx-auto grid max-w-362.5 grid-cols-1 border-3 border-red-500  gap-8 lg:grid-cols-[1.15fr_1fr]">
         {/* LEFT SECTION */}
         <section className="flex min-w-0 flex-col">
           {/* HEADER */}
-          <header className="flex h-20 items-start">
-            <div className="flex items-center gap-2">
-              <div className="flex h-14 w-14 items-center justify-center border-r border-gray-300 font-serif text-3xl italic">
-                EG
+          <header className="flex-col h-40 items-start border-b border-green-500  sm:flex sm:justify-start">
+            <div className="items-center gap-2">
+              <div className="flex-row-reverse flex items-center gap-2 border-b-indigo-800 border-4">
+                <img
+                  className=" -scale-x-100"
+                  src="./resources/knight.png"
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                />
+                <div className="initial-logo flex h-14 w-14 items-center justify-center font-serif text-3xl italic">
+                  EG
+                </div>
               </div>
 
-              <div className="font-serif text-[11px] leading-tight tracking-wide">
-                <p className="font-semibold">EmelGabb</p>
-                <p>Trading System</p>
+              <div className="font-serif text-[11px] leading-tight tracking-wide ">
+                <p className="font-semibold emelgabb-text">EmelGabb</p>
+                <p className="emelgabb-text">Trading System</p>
               </div>
             </div>
           </header>
@@ -128,7 +137,7 @@ export default function Cashier() {
             </div>
 
             <div>
-              Costumer :<span className="ml-2 text-gray-700"></span>
+              Customer : Albert<span className="ml-2 text-gray-700"></span>
             </div>
 
             <div>
@@ -169,7 +178,8 @@ export default function Cashier() {
               >
                 {product.name}
               </button>
-            ))} */}
+            ))} 
+             */}
 
             {/* {filteredProducts.length === 0 && (
               <p className="col-span-full py-8 text-center text-xs text-gray-400">
