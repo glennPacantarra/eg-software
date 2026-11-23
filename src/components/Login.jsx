@@ -29,13 +29,12 @@ function Login() {
     console.log("Google login clicked");
   };
   return (
-    <main className="min-h-screen w-full bg-white p-3 md:p-5">
-      <div className="mx-auto grid min-h-[calc(100vh-40px)] max-w-[1600px] grid-cols-1 overflow-hidden rounded-2xl bg-white md:grid-cols-2">
+    <main className="min-h-screen  bg-white p-1 md:p-5">
+      <div className=" mx-auto grid min-h-[calc(100vh-40px)] max-w-[1600px] grid-cols-1 overflow-hidden rounded-2xl bg-white md:grid-cols-2">
         {/* LEFT BRANDING PANEL */}
-        <section className="relative flex min-h-120 items-center overflow-hidden rounded-2xl bg-[#14213e] px-9 py-12 md:min-h-full md:px-10 lg:px-12 ">
-          {/* Decorative helmet artwork */}
+        <section className="hidden md:flex  relative  min-h-120   items-center overflow-hidden rounded-2xl bg-[#14213e] px-9 py-12 md:min-h-full md:px-10 lg:px-12 ">
           <div
-            className="pointer-events-none absolute -right-28 top-1/2 h-[85%] transform -scale-x-100 w-[75%] -translate-y-1/2 bg-contain bg-right bg-no-repeat opacity-50"
+            className="pointer-events-none absolute -right-50  top-1/2 h-[55%] transform -scale-x-100 w-[75%] -translate-y-1/2 bg-contain bg-right bg-no-repeat opacity-50"
             style={{
               backgroundImage: "url('../../public/image/knight.png')",
             }}
@@ -72,25 +71,25 @@ function Login() {
         </section>
 
         {/* RIGHT LOGIN PANEL */}
-        <section className="flex min-h-155 items-center justify-center px-7 py-12 md:min-h-full md:px-12 lg:px-16 xl:px-20">
-          <div className="w-full max-w-107.5">
+        <section className="grid  grid-cols-1 border-2 rounded-2xl bg-white px-4 py-8 sm:px-6 lg:px-8 md:ml-0 md:rounded-none md:border-l md:border-gray-200 md:bg-[#f9f9f9]">
+          <div className="flex flex-col justify-center px-4 py-8 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="mb-9">
-              <h2 className="text-3xl font-bold tracking-wide text-[#26334f]">
+              <h2 className=" text-4xl md:text-4xl  sm:text-3xl font-medium tracking-wide">
                 Welcome back
               </h2>
 
-              <p className="mt-1 text-[11px] tracking-wide text-gray-500">
+              <p className="mt-1 mb-5 text-[14px]  tracking-wide">
                 Enter your details to access your account
               </p>
             </div>
             {/* Login Form */}
-            <form onSubmit={handleLogin} className="space-y-6">
+            <form onSubmit={handleLogin} className="space-y-6 ">
               {/* Username */}
               <div>
                 <label
                   htmlFor="username"
-                  className="mb-2 block text-sm font-medium text-gray-800"
+                  className="mb-2 block text-base font-medium text-gray-800"
                 >
                   Email/ Username
                 </label>
@@ -102,7 +101,7 @@ function Login() {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
-                  className="h-10.75 w-full rounded-full border border-[#b9dff5] bg-white px-5 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-[#14213e] focus:ring-2 focus:ring-[#14213e]/10"
+                  className="h-15 w-full rounded-full border border-[#b9dff5] bg-white px-5 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-[#14213e] focus:ring-2 focus:ring-[#14213e]/10"
                 />
               </div>
 
@@ -110,7 +109,7 @@ function Login() {
               <div>
                 <label
                   htmlFor="password"
-                  className="mb-2 block text-sm font-medium text-gray-800"
+                  className="mb-2 block  text-base font-medium text-gray-800"
                 >
                   Password
                 </label>
@@ -123,7 +122,7 @@ function Login() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    className="h-10.75 w-full rounded-full border border-[#b9dff5] bg-white px-5 pr-12 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-[#14213e] focus:ring-2 focus:ring-[#14213e]/10"
+                    className="h-15 w-full rounded-full border border-[#b9dff5] bg-white px-5 pr-12 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-[#14213e] focus:ring-2 focus:ring-[#14213e]/10"
                   />
 
                   <button
@@ -136,10 +135,10 @@ function Login() {
                   </button>
                 </div>
 
-                <div className="mt-5 text-right">
+                <div className="mt-5  text-right">
                   <a
                     href="/forgot-password"
-                    className="text-xs font-medium tracking-wide text-[#e7ac32] transition hover:text-[#bd8520]"
+                    className="text-sm font-medium tracking-wide text-[#e7ac32] transition hover:text-[#bd8520]"
                   >
                     Forgot Password?
                   </a>
@@ -149,17 +148,17 @@ function Login() {
               {/* Login Button */}
               <button
                 type="submit"
-                className="h-10.5 w-full rounded-full bg-[#14213e] text-sm font-medium text-white transition duration-200 hover:bg-[#243657] active:scale-[0.99]"
+                className="h-15 w-full mt-auto sm:mt-5 rounded-full bg-[#14213e] text-sm font-medium text-white transition duration-200 hover:bg-[#243657] active:scale-[0.99]"
               >
                 Login
               </button>
             </form>
             {/* Google Sign In */}
-            <div className="mt-16">
+            <div className="mt-9 sm:mt-10">
               <button
                 type="button"
                 onClick={handleGoogleLogin}
-                className="flex h-10.75 w-full items-center justify-center gap-8 rounded-full border border-[#c8e5f5] bg-white text-sm text-gray-500  hover:bg-[#8ECAE6] transition"
+                className="flex h-15 w-full items-center justify-center gap-8 rounded-full border border-[#c8e5f5] bg-white text-sm text-gray-500  hover:bg-[#8ECAE6] transition"
               >
                 {/* Google Icon */}
                 <svg viewBox="0 0 48 48" className="h-6 w-6" aria-hidden="true">
@@ -185,13 +184,13 @@ function Login() {
               </button>
             </div>
           </div>
+          <section className=" pt-2 mt-3">
+            <div>
+              <Footer />
+            </div>
+          </section>
         </section>
       </div>
-      <section className=" pt-2 mt-3">
-        <div>
-          <Footer />
-        </div>
-      </section>
     </main>
   );
 }
